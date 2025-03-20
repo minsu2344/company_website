@@ -4,7 +4,7 @@ import Hero from './Hero';
 
 function MainPage() {
   return (
-    <div>
+    <div className='space-y-30'>
       <Hero />
       <Forum />
       <Contact />

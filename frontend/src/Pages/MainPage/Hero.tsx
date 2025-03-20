@@ -1,15 +1,17 @@
 import React from 'react';
 import HeroImage from '../../assets/Image1.jpg';
 
-function Hero() {
+const Hero = () => {
   return (
     <div className='relative min-h-[110vh] bg-gradient-to-b from-gray-50 to-white pb-0'>
-      <div className='container mx-auto px-4 sm:py-6 lg:px-8 py-28 lg:py-36'>
+      <div className='container mx-auto px-4 sm:px-6 lg:px-8 py-28 lg:py-36'>
         <div className='flex flex-col lg:flex-row items-center justify-between gap-12'>
           <div className='flex-1 text-center lg:text-left'>
             <h1 className='text-3xl sm:text-4xl 2xl:text-7xl font-bold text-gray-900 leading-tight mb-6 lg:mb-12'>
               태양광 설비 전문가와 함께
-              <p className='text-blue-600 mt-2 lg:mt-6'>미래를 만들어갑니다.</p>
+              <span className='block text-blue-600 mt-2 lg:mt-6'>
+                미래를 만들어갑니다.
+              </span>
             </h1>
             <p className='text-lg sm:text-xl text-gray-800 text-semibold mb-8 max-w-2xl mx-auto'>
               안전하고 효율적인 태양광 설비 설치부터 유지보수까지, 전문가들이
@@ -34,7 +36,6 @@ function Hero() {
           </div>
         </div>
       </div>
-
       <div className='container mx-auto px-4'>
         <div className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto'>
           {[
@@ -54,6 +55,6 @@ function Hero() {
       </div>
     </div>
   );
-}
+};
 
 export default Hero;
