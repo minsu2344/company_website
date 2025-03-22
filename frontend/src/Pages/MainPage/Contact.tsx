@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const Contact = () => {
+function Contact() {
   return (
     <div className='bg-white py-20 lg:py-40'>
       <div className='container mx-auto px-4 max-w-6xl'>
@@ -67,6 +67,6 @@ const Contact = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Contact;

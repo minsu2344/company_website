@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const Forum = () => {
+function Forum() {
   const dummyPosts = [
     {
       _id: 1,
@@ -132,6 +132,6 @@ const Forum = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Forum;
