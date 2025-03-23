@@ -1,13 +1,20 @@
+import express, { Request, Response } from 'express';
 require('dotenv').config();
-const express = require('express');
+import userRouter from './routes/user';
+
 const mongoose = require('mongoose');
 const app = express();
 
 const PORT = 3000;
 
-app.get('/', (req, res) => {
+app.use(express.json());
+app.use(express.urlencoded());
+
+app.get('/', (req: Request, res: Response) => {
   res.send('안녕');
 });
+
+app.use('/auth', userRouter);
 
 mongoose
   .connect(process.env.MONGODB_URI)

@@ -1,17 +1,7 @@
-import mongoose, { Document, Model } from 'mongoose' // import가 최신 표준 문법. 안 되면 require 사용
+import mongoose, { Model } from 'mongoose' // import가 최신 표준 문법. 안 되면 require 사용
+import { ISchemaUser } from '../types/user'
 
-interface IUser extends Document {
-  username: string;
-  password: string;
-  isLoggedIn: boolean;
-  isActive: boolean;
-  failedLoginAttempts: number;
-  lastLoginAttempt: Date;
-  ipAddress: string;
-  createdAt: Date;
-}
-
-const userSchema = new mongoose.Schema<IUser>(
+const userSchema = new mongoose.Schema<ISchemaUser>(
   {
     username: {
       type: String,
@@ -54,6 +44,6 @@ const userSchema = new mongoose.Schema<IUser>(
   }
 )
 
-const User: Model<IUser> = mongoose.model('User', userSchema);
+const User: Model<ISchemaUser> = mongoose.model('User', userSchema);
 
-module.exports = User;
+export default User;
